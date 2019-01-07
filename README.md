@@ -37,9 +37,13 @@
     * [ ] `clasp` 対応ファイル作成
     * [ ] `clasp` でのデプロイ手順作成
 * [ ] 「外出中」「予定枠」などの設定に対応する
-    * [ ] 設定がどこでできるのか調査。 [stackoverflow](https://stackoverflow.com/questions/51617844/how-do-i-create-an-out-of-office-type-calendar-event-via-the-rest-api) によると `extendedProperties.private.everyoneDeclinedDismissed` ではないかとのこと
-    * [ ] 設定が可能になるようにコード修正
-    * [ ] スクリプトのプロパティなどで、ディフォルト値が指定できるように修正
+    * [x] 設定がどこでできるのか調査。 [stackoverflow](https://stackoverflow.com/questions/51617844/how-do-i-create-an-out-of-office-type-calendar-event-via-the-rest-api) によると `extendedProperties.private.everyoneDeclinedDismissed` ではないかとのこと
+        * カレンダーのGUI上で作成した「外出中」に関しては `extendedProperties.private.everyoneDeclinedDismissed=-1` になっているが、API経由で設定しても通常のカレンダーになってしまう
+        * #1 に調査結果記述
+    * [ ] ~~設定が可能になるようにコード修正~~
+        * 現状API経由で設定不可
+    * [ ] ~~スクリプトのプロパティなどで、ディフォルト値が指定できるように修正~~
+        * 現状API経由では設定不可なので、保留
 
 
 ## Author
